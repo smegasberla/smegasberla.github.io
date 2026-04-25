@@ -30,6 +30,10 @@
     cursor: none;
   }
 
+  @media (hover: none) and (pointer: coarse) {
+    body { cursor: auto; }
+  }
+
   /* Custom cursor */
   .cursor {
     position: fixed;
@@ -765,12 +769,21 @@
 </footer>
 
 <script>
-  // Custom cursor
+  // Custom cursor — disable on touch devices
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
+  const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+  if (isTouchDevice) {
+    cursor.style.display = 'none';
+    ring.style.display = 'none';
+    document.body.style.cursor = 'auto';
+  }
+
   let mx = 0, my = 0, rx = 0, ry = 0;
 
   document.addEventListener('mousemove', e => {
+    if (isTouchDevice) return;
     mx = e.clientX; my = e.clientY;
     cursor.style.left = mx + 'px';
     cursor.style.top = my + 'px';
