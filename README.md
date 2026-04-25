@@ -26,9 +26,9 @@ Open for plugin commissions — free or paid.
 
 | Area | Technologies |
 |---|---|
-| Minecraft | Paper, Spigot, PacketEvents, ProtocolLib |
-| Languages | Java, Kotlin, Rust, C++ |
-| Tools | Gradle, Maven, Git |
+| Minecraft | Paper, Spigot, PacketEvents, PlaceholderAPI |
+| Languages | Java |
+| Tools | Maven, Git |
 
 ---
 
