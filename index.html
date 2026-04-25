@@ -313,6 +313,8 @@
     background: linear-gradient(135deg, rgba(74,222,128,0.03) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 0;
   }
   .project-card:hover::before { opacity: 1; }
 
@@ -380,6 +382,8 @@
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
   }
 
   .project-link {
